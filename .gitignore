@@ -5,4 +5,6 @@
 !/.git-completion.bash
 !/.pureline.conf
 
+!/install.sh
+
 !.gitignore
