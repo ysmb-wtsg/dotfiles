@@ -3,6 +3,7 @@ set -ue
 
 for dotfile in .??*; do
 	[[ $dotfile == ".git" ]] && continue
+	[[ $dotfile == ".gitconfig.local" ]] && continue
 	[[ $dotfile == ".gitignore" ]] && continue
 	ln -snfv "$(pwd)/$dotfile" "$HOME/$dotfile"
 done

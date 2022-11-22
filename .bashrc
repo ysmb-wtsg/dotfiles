@@ -1,5 +1,5 @@
 
-source ~/pureline/pureline ~/.pureline.conf
+source ~/.pureline/pureline ~/.pureline.conf
 source ~/.git-completion.bash
 
 alias acmd='powershell -command "Start-Process -Verb runas cmd"'
@@ -8,7 +8,10 @@ alias d='docker'
 alias dc='docker-compose'
 alias py='python'
 alias ..='cd ..'
-alias vibr='vim ~/.bashrc'
+alias vimbr='vim ~/.bashrc'
+alias vimgc='vim ~/.gitconfig'
+alias vimvr='vim ~/.vimrc'
+alias vimtr='vim ~/.tigrc'
 
 function to_win_path() {
   path=${*}

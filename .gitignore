@@ -3,8 +3,9 @@
 !/.bash_profile
 !/.bashrc
 !/.git-completion.bash
-!/.pureline.conf
+!/.vimrc
+!/.gitconfig
 
 !/install.sh
 
-!.gitignore
+!/.gitignore

@@ -1,0 +1,23 @@
+[include]
+	path = ~/.gitconfig.local
+[core]
+	autocrlf = true
+[push]
+	default = current
+[alias]
+  st = status
+  cm = commit -m
+  l = log --graph --date=short --decorate=short --pretty=format:'%Cgreen%h %Creset%cd %Cblue%cn %Cred%d %Creset%s'
+  br = branch
+  bra = branch -a -vv
+  co = checkout
+  cob = checkout -b
+  sh = stash
+  shps = stash push
+  shpp = stash pop
+  cp = cherry-pick
+  pl = pull
+  ps = push
+  ca = commit --amend
+  rb = rebase
+  alias = !git config --get-regexp alias |  sed 's/^alias.//g' | sed 's/ / = /1'
