@@ -18,9 +18,6 @@ set number
 " 検索結果をハイライト表示
 set hlsearch
 
-" ヤンクでクリップボードにコピー
-set clipboard=unnamed,autoselect
-
 " カーソル位置をハイライト
 set cursorline
 
@@ -37,6 +34,8 @@ inoremap kk <ESC>
 " TABでインデント
 nnoremap <Tab> >>
 nnoremap <Space><Tab> <<
+vnoremap <Tab> >gv
+vnoremap <Space><Tab> <gv
 
 " <Space>s で置換
 nnoremap <Space>s :%s/
@@ -52,14 +51,6 @@ nnoremap <Space>jj :wq<CR>
 
 " ctrl+Aで全選択
 nnoremap <C-a> gg<S-v>G
-
-" cdxをヤンクしない
-nnoremap c "_c
-vnoremap c "_c
-nnoremap d "_d
-vnoremap d "_d
-nnoremap x "_x
-vnoremap x "_x
 
 " 数字のインクリメント
 nnoremap <Up> <C-a>
