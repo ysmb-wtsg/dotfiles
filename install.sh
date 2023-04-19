@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-set -ue
 
 for dotfile in .??*; do
 	[[ $dotfile == ".git" ]] && continue
