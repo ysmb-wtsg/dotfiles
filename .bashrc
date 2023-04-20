@@ -1,5 +1,4 @@
 
-source ~/.pureline/pureline ~/.pureline.conf
 source ~/.git-completion.bash
 
 alias acmd='powershell -command "Start-Process -Verb runas cmd"'

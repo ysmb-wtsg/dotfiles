@@ -8,7 +8,7 @@ for dotfile in .??*; do
 	ln -snfv "$(pwd)/$dotfile" "$HOME/$dotfile"
 done
 
-vsc_keybindings = "keybindings.json"
+vsc_keybindings="keybindings.json"
 ln -snfv "$(pwd)/$vsc_keybindings" "$HOME/AppData/Roaming/Code/User/$vsc_keybindings"
 
 echo "create link completed!!!!"

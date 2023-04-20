@@ -5,7 +5,6 @@
 !/.git-completion.bash
 !/.vimrc
 !/.gitconfig
-!/.pureline*
 !/settings.json
 !/keybindings.json
 
