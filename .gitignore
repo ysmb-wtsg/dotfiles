@@ -5,6 +5,7 @@
 !/.git-completion.bash
 !/.vimrc
 !/.gitconfig
+!/.pureline*
 
 !/install.sh
 
