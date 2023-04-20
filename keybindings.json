@@ -1,0 +1,103 @@
+[
+    // --------------------------------------
+    // 無効
+    // --------------------------------------
+    {
+        "key": "ctrl+b",
+        "command": "-extension.vim_ctrl+b",
+        "when": "editorTextFocus && vim.active && vim.use<C-b> && !inDebugRepl && vim.mode != 'Insert'"
+    },
+    // --------------------------------------
+    // 有効
+    // --------------------------------------
+    // --------------------------------------
+    // TOGGLE
+    // --------------------------------------
+    // サイドバーのtoggle
+    {
+        "key": "ctrl+n",
+        "command": "workbench.action.toggleSidebarVisibility",
+    },
+    // ターミナルのtoggle
+    {
+        "key": "ctrl+m",
+        "command": "workbench.action.terminal.toggleTerminal",
+    },
+    // --------------------------------------
+    // FOCUS
+    // --------------------------------------
+    // エクスプローラーへフォーカス
+    {
+        "key": "ctrl+h",
+        "command": "workbench.files.action.focusFilesExplorer"
+    },
+    // エディタへフォーカス
+    {
+        "key": "ctrl+k",
+        "command": "workbench.action.focusActiveEditorGroup"
+    },
+    // ターミナルへフォーカス
+    {
+        "key": "ctrl+j",
+        "command": "workbench.action.terminal.focus"
+    },
+    // --------------------------------------
+    // エクスプローラー
+    // --------------------------------------
+    // ファイルを開く
+    {
+        "key": "o",
+        "command": "list.select",
+        "when": "explorerViewletFocus && listFocus &&explorerViewletVisible && !inputFocus"
+    },
+    // ファイルを削除
+    {
+        "key": "d",
+        "command": "deleteFile",
+        "when": "explorerViewletFocus && listFocus &&explorerViewletVisible && !inputFocus"
+    },
+    // ファイル名を変更
+    {
+        "key": "r",
+        "command": "renameFile",
+        "when": "explorerViewletFocus && listFocus &&explorerViewletVisible && !inputFocus"
+    },
+    // 新規ファイルを作成
+    {
+        "key": "n",
+        "command": "explorer.newFile",
+        "when": "explorerViewletFocus && listFocus &&explorerViewletVisible && !inputFocus",
+    },
+    // 新規フォルダを作成
+    {
+        "key": "f",
+        "command": "explorer.newFolder",
+        "when": "explorerViewletFocus && listFocus &&explorerViewletVisible && !inputFocus",
+    },
+    // 設定ファイル
+    // keyboard shortcuts を開く
+    {
+        "key": "ctrl+shift+/",
+        "command": "workbench.action.openGlobalKeybindings"
+    },
+    // keybindings.json　を開く
+    {
+        "key": "ctrl+shift+k",
+        "command": "workbench.action.openGlobalKeybindingsFile"
+    },
+    // settings.json を開く
+    {
+        "key": "ctrl+shift+s",
+        "command": "workbench.action.openSettingsJson"
+    },
+    {
+        "key": "ctrl+n",
+        "command": "-extension.vim_ctrl+n",
+        "when": "editorTextFocus && vim.active && vim.use<C-n> && !inDebugRepl || vim.active && vim.use<C-n> && !inDebugRepl && vim.mode == 'CommandlineInProgress' || vim.active && vim.use<C-n> && !inDebugRepl && vim.mode == 'SearchInProgressMode'"
+    },
+    {
+        "key": "ctrl+w",
+        "command": "-extension.vim_ctrl+w",
+        "when": "editorTextFocus && vim.active && vim.use<C-w> && !inDebugRepl"
+    }
+]

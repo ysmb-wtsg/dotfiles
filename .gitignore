@@ -6,6 +6,8 @@
 !/.vimrc
 !/.gitconfig
 !/.pureline*
+!/settings.json
+!/keybindings.json
 
 !/install.sh
 
