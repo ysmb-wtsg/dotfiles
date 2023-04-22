@@ -55,3 +55,9 @@ nnoremap <C-a> gg<S-v>G
 " 数字のインクリメント
 nnoremap <Up> <C-a>
 nnoremap <Down> <C-x>
+
+" <Space>nで:noh
+nnoremap <Space>n :noh
+
+" xでヤンクしない
+nnoremap x "_x
