@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+cd ~/dotfiles
 for dotfile in .??*; do
 	[[ $dotfile == ".git" ]] && continue
 	[[ $dotfile == ".gitconfig.local" ]] && continue
