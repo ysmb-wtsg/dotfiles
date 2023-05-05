@@ -61,3 +61,6 @@ nnoremap <Space>n :noh
 
 " xでヤンクしない
 nnoremap x "_x
+
+" <Space><CR>でかっこから抜ける
+inoremap <Space><CR> <ESC><C-%>a

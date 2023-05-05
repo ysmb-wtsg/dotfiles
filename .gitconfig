@@ -3,7 +3,7 @@
 [push]
 	default = current
 [core]
-	autocrlf = true
+	autocrlf = input
 [alias]
   ai = add -i
   alias = !git config --get-regexp alias |  sed 's/^alias.//g' | sed 's/ / = /1'
