@@ -10,10 +10,12 @@
   b = branch
   ba = branch -a -vv
   bd = branch -D
+  bm = branch -m
   ca = commit --amend
   co = checkout
   cob = checkout -b
   cm = commit -m
+  cp = cherry-pick
   pl = pull
   ps = push
   l = log --graph --date=short --decorate=short --pretty=format:'%Cgreen%h %Creset%cd %Cblue%cn %Cred%d %Creset%s'
@@ -35,14 +37,5 @@
   sha = stash apply
   shd = stash drop
   st = status
-  w = worktree
-  wl = worktree list
-  wa = worktree add
-  wab = worktree add -b
-  wr = worktree remove
-  wc = "!f(){ \
-           git_root_dir=`git rev-parse --show-toplevel`;\
-	   cd $git_root_dir/$1;\
-	};f"
 [credential "https://git-codecommit.ap-northeast-1.amazonaws.com"]
-	provider = generic
+  provider = generic
