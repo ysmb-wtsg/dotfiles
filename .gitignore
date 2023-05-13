@@ -2,9 +2,11 @@
 
 !/.bash_profile
 !/.bashrc
+!/.config
 !/.git-completion.bash
 !/.vimrc
 !/.gitconfig
+!/.zshrc
 !/settings.json
 !/keybindings.json
 
