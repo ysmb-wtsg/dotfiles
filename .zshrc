@@ -3,6 +3,7 @@ export PATH=$PATH:/opt/homebrew/bin
 alias d='docker'
 alias dc='docker-compose'
 alias g='git'
+alias lg='lazygit'
 alias nv='nvim'
 alias py='python'
 alias sshkg='ssh-keygen'
