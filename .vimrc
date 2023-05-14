@@ -1,4 +1,15 @@
-" カーソル移動
+" settings
+set number
+set hlsearch
+set cursorline
+set incsearch
+set smartindent
+set ignorecase
+set smartcase
+syntax on
+
+" keymaps
+" cusor
 nnoremap j gj
 nnoremap k gk
 vnoremap j gj
@@ -12,52 +23,37 @@ nnoremap <S-l> g$
 vnoremap <S-h> g^
 vnoremap <S-l> g$
 
-" 行番号を表示
-set number
-
-" 検索結果をハイライト表示
-set hlsearch
-
-" カーソル位置をハイライト
-set cursorline
-
-" インクリメントサーチ
-set incsearch
-
-" 行追加時に自動インデント
-set smartindent
-
-" jjでノーマルモードに抜ける
+" mode
 inoremap jj <ESC>
 inoremap kk <ESC>
 
-" TABでインデント
+" indent
 nnoremap <Tab> >>
 nnoremap <Space><Tab> <<
 vnoremap <Tab> >gv
 vnoremap <Space><Tab> <gv
 
-" <Space>s で置換
+" search
 nnoremap <Space>s :%s/
 
-" <Space>i でコードをインデント整形
+" format
 nnoremap <Space>i gg=<S-g>
 
-" <Space><Space>で上書き保存
-nnoremap <Space><Space> :w<CR>
-
-" <Space>jjで上書きして閉じる
+" file action
+nnoremap <Space>w :w<CR>
+nnoremap <Space>q :q<CR>
+nnoremap <Space>fq :q!<CR>
 nnoremap <Space>jj :wq<CR>
 
-" ctrl+Aで全選択
+" selection
 nnoremap <C-a> gg<S-v>G
 
-" 数字のインクリメント
-nnoremap <Up> <C-a>
-nnoremap <Down> <C-x>
+" calc
+nnoremap <Space>+ <C-a>
+nnoremap <Space>- <C-x>
 
-" <Space>nで:noh
-nnoremap <Space>n :noh
+" highlight
+nnoremap <Space>nh :noh
 
-" xでヤンクしない
+" yank
 nnoremap x "_x
