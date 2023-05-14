@@ -5,6 +5,7 @@
 !/.config
 !/.git-completion.bash
 !/.vimrc
+!/.gvimrc
 !/.gitconfig
 !/.zshrc
 !/settings.json
