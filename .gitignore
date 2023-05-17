@@ -12,5 +12,6 @@
 !/keybindings.json
 
 !/install.sh
+!scripts/
 
 !/.gitignore
