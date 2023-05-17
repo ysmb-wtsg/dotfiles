@@ -1,4 +1,4 @@
 #!/usr/bin bash
 
-./scripts/brew_install.sh
-./scripts/create-symbolic-link.sh
+bash ./scripts/brew_install.sh
+bash ./scripts/create-symbolic-link.sh
