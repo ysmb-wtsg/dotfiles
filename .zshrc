@@ -1,5 +1,6 @@
 setopt auto_cd
 
+export PATH=/opt/homebrew/bin:$PATH
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 alias d='docker'
