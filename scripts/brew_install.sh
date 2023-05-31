@@ -16,6 +16,8 @@ echo "ok. run brew upgrade..."
 formulas=(
     cask
     curl
+    docker
+    docker-compose
     git
     lazygit
     neovim
@@ -40,6 +42,7 @@ casks=(
     font-hack-nerd-font
     google-chrome
     iterm2
+    karabiner-elements
     visual-studio-code
 )
 
