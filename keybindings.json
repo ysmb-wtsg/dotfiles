@@ -61,12 +61,12 @@
     {
         "key": "right",
         "command": "workbench.action.nextEditor",
-        "when": "vim.mode != 'Insert'",
+        "when": "!terminalFocus",
     },
     // open previous tab
     {
         "key": "left",
         "command": "workbench.action.previousEditor",
-        "when": "vim.mode != 'Insert'",
+        "when": "!terminalFocus",
     }, 
 ]
