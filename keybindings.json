@@ -1,79 +1,18 @@
 [
     // -----------------------------
-    // file
-    // -----------------------------
-    // override vimrc
-    {
-        "key": "space w",
-        "command": "workbench.action.files.save",
-        "when": "vim.mode != 'Insert'",
-    },
-    // override vimrc
-    {
-        "key": "space q",
-        "command": "workbench.action.closeActiveEditor",
-        "when": "vim.mode != 'Insert'",
-    },
-    {
-        "key": "space f",
-        "command": "workbench.action.quickOpen",
-        "when": "vim.mode != 'Insert'",
-    },
-    // -----------------------------
-    // tab
-    // -----------------------------
-    // open next tab
-    {
-        "key": "space h",
-        "command": "workbench.action.previousEditor",
-        "when": "vim.mode != 'Insert'",
-    },
-    // open previous tab
-    {
-        "key": "space l",
-        "command": "workbench.action.nextEditor",
-        "when": "vim.mode != 'Insert'",
-    },
-    // -----------------------------
     // toggle
     // -----------------------------
     // toggle sidebar
     {
-        "key": "space e",
+        "key": "ctrl+e",
         "command": "workbench.action.toggleSidebarVisibility",
         "when": "vim.mode != 'Insert'",
     },
     // toggle taiminal
     {
-        "key": "space t",
+        "key": "ctrl+t",
         "command": "workbench.action.terminal.toggleTerminal",
         "when": "vim.mode != 'Insert'",
-    },
-    // -----------------------------
-    // focus
-    // -----------------------------
-    {
-        "key": "shift+h",
-        "command": "workbench.files.action.focusFilesExplorer",
-        "when": "vim.mode != 'Insert'",
-    },
-    {
-        "key": "shift+j",
-        "command": "terminal.focus",
-        "when": "vim.mode != 'Insert'",
-    },
-    {
-        "key": "shift+l",
-        "command": "workbench.action.focusActiveEditorGroup",
-        "when": "vim.mode != 'Insert' && explorerViewletFocus"
-    },
-    // -----------------------------
-    // command palet
-    // -----------------------------
-    {
-        "key": "space p",
-        "command": "workbench.action.showCommands",
-        "when": "vim.mode != 'Insert'"
     },
     // -----------------------------
     // explorer
@@ -107,12 +46,27 @@
     // -----------------------------
     // open keybindings.json
     {
-        "key": "/ k",
+        "key": "ctrl+shift+k",
         "command": "workbench.action.openGlobalKeybindingsFile"
     },
     // open settings.json
     {
-        "key": "/ s",
+        "key": "ctrl+shift+s",
         "command": "workbench.action.openSettingsJson"
     },
+    // -----------------------------
+    // tab
+    // -----------------------------
+    // open next tab
+    {
+        "key": "right",
+        "command": "workbench.action.nextEditor",
+        "when": "vim.mode != 'Insert'",
+    },
+    // open previous tab
+    {
+        "key": "left",
+        "command": "workbench.action.previousEditor",
+        "when": "vim.mode != 'Insert'",
+    }, 
 ]

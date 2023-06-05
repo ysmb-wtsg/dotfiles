@@ -57,3 +57,26 @@ nnoremap <Space>nh :noh
 
 " yank
 nnoremap x "_x
+
+" mainly for markdown
+inoremap っj <ESC>
+inoremap ｊｊ <ESC>
+inoremap 　 <Space>
+inoremap ーー -<Space>
+inoremap ” "
+inoremap ＃ #
+inoremap １ 1
+inoremap 。 .
+inoremap １。 1.<space>
+inoremap １。 1.<space>
+inoremap ２。 2.<space>
+inoremap ３。 3.<space>
+inoremap ４。 4.<space>
+inoremap ５。 5.<space>
+inoremap 「」 []()<Left><Left><Left>
+inoremap ＞ >
+inoremap ｀ `
+inoremap ＊ *
+inoremap 〜 ~
+inoremap ｜ |
+inoremap ： :
