@@ -14,7 +14,9 @@ which brew >/dev/null 2>&1 && brew update
 echo "ok. run brew upgrade..."
 
 formulas=(
+    awscli
     cask
+    colima
     curl
     docker
     docker-compose
@@ -43,6 +45,7 @@ casks=(
     google-chrome
     iterm2
     karabiner-elements
+    raycast
     visual-studio-code
 )
 
