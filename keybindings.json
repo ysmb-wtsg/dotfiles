@@ -1,72 +1,72 @@
 [
-    // -----------------------------
-    // toggle
-    // -----------------------------
-    // toggle sidebar
-    {
-        "key": "ctrl+e",
-        "command": "workbench.action.toggleSidebarVisibility",
-        "when": "vim.mode != 'Insert'",
-    },
-    // toggle taiminal
-    {
-        "key": "ctrl+t",
-        "command": "workbench.action.terminal.toggleTerminal",
-        "when": "vim.mode != 'Insert'",
-    },
-    // -----------------------------
-    // explorer
-    // -----------------------------
-    // open file
-    {
-        "key": "Enter",
-        "command": "list.select",
-        "when": "explorerViewletFocus && listFocus &&explorerViewletVisible && !inputFocus"
-    },
-    // delete file
-    {
-        "key": "d",
-        "command": "deleteFile",
-        "when": "explorerViewletFocus && listFocus &&explorerViewletVisible && !inputFocus"
-    },
-    // rename file
-    {
-        "key": "r",
-        "command": "renameFile",
-        "when": "explorerViewletFocus && listFocus &&explorerViewletVisible && !inputFocus"
-    },
-    // add file or folder
-    {
-        "key": "a",
-        "command": "explorer.newFile",
-        "when": "explorerViewletFocus && listFocus &&explorerViewletVisible && !inputFocus",
-    },
-    // -----------------------------
-    // open json
-    // -----------------------------
-    // open keybindings.json
-    {
-        "key": "ctrl+shift+k",
-        "command": "workbench.action.openGlobalKeybindingsFile"
-    },
-    // open settings.json
-    {
-        "key": "ctrl+shift+s",
-        "command": "workbench.action.openSettingsJson"
-    },
-    // -----------------------------
-    // tab
-    // -----------------------------
-    // open next tab
-    {
-        "key": "right",
-        "command": "workbench.action.nextEditor",
-        "when": "!terminalFocus",
-    },
-    // open previous tab
-    {
-        "key": "left",
-        "command": "workbench.action.previousEditor",
-        "when": "!terminalFocus",
-    }, 
+  // -----------------------------
+  // toggle
+  // -----------------------------
+  // toggle sidebar
+  {
+    "key": "ctrl+e",
+    "command": "workbench.action.toggleSidebarVisibility",
+    "when": "vim.mode != 'Insert'"
+  },
+  // toggle taiminal
+  {
+    "key": "ctrl+t",
+    "command": "workbench.action.terminal.toggleTerminal",
+    "when": "vim.mode != 'Insert'"
+  },
+  // -----------------------------
+  // explorer
+  // -----------------------------
+  // open file
+  {
+    "key": "Enter",
+    "command": "list.select",
+    "when": "explorerViewletFocus && listFocus &&explorerViewletVisible && !inputFocus"
+  },
+  // delete file
+  {
+    "key": "d",
+    "command": "deleteFile",
+    "when": "explorerViewletFocus && listFocus &&explorerViewletVisible && !inputFocus"
+  },
+  // rename file
+  {
+    "key": "r",
+    "command": "renameFile",
+    "when": "explorerViewletFocus && listFocus &&explorerViewletVisible && !inputFocus"
+  },
+  // add file or folder
+  {
+    "key": "a",
+    "command": "explorer.newFile",
+    "when": "explorerViewletFocus && listFocus &&explorerViewletVisible && !inputFocus"
+  },
+  // -----------------------------
+  // open json
+  // -----------------------------
+  // open keybindings.json
+  {
+    "key": "ctrl+shift+k",
+    "command": "workbench.action.openGlobalKeybindingsFile"
+  },
+  // open settings.json
+  {
+    "key": "ctrl+shift+s",
+    "command": "workbench.action.openSettingsJson"
+  },
+  // -----------------------------
+  // tab
+  // -----------------------------
+  // open next tab
+  {
+    "key": "right",
+    "command": "workbench.action.nextEditor",
+    "when": "editorTextFocus"
+  },
+  // open previous tab
+  {
+    "key": "left",
+    "command": "workbench.action.previousEditor",
+    "when": "editorTextFocus"
+  }
 ]
