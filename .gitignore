@@ -10,6 +10,8 @@
 !/.zshrc
 !/settings.json
 !/keybindings.json
+!/.zprofile
+!/.zlogout
 
 !/install.sh
 !scripts/
