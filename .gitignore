@@ -12,6 +12,8 @@
 !/keybindings.json
 !/.zprofile
 !/.zlogout
+!/.git-prompt.sh
+!/_git
 
 !/install.sh
 !scripts/
