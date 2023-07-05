@@ -61,12 +61,8 @@ nnoremap x "_x
 " mainly for markdown
 inoremap っj <ESC>
 inoremap ｊｊ <ESC>
-inoremap 　 <Space>
 inoremap ーー -<Space>
 inoremap ” "
-inoremap ＃ #
-inoremap １ 1
-inoremap 。 .
 inoremap １。 1.<space>
 inoremap １。 1.<space>
 inoremap ２。 2.<space>
@@ -80,3 +76,4 @@ inoremap ＊ *
 inoremap 〜 ~
 inoremap ｜ |
 inoremap ： :
+inoremap ； :
