@@ -8,6 +8,8 @@ for dotfile in .??*; do
 	ln -snfv "$(pwd)/$dotfile" "$HOME/$dotfile"
 done
 
+ln -snfv "$(pwd)/_git" "$HOME/_git"
+
 vsc_keybindings="keybindings.json"
 # for windows
 ln -snfv "$(pwd)/$vsc_keybindings" "$HOME/AppData/Roaming/Code/User/$vsc_keybindings"
