@@ -14,10 +14,10 @@ nnoremap j gj
 nnoremap k gk
 vnoremap j gj
 vnoremap k gk
-nnoremap <S-j> <C-d>
-nnoremap <S-k> <C-u>
-vnoremap <S-j> <C-d>
-vnoremap <S-k> <C-u>
+nnoremap <S-j> 15j
+nnoremap <S-k> 15k
+vnoremap <S-j> 15j
+vnoremap <S-k> 15k
 nnoremap <S-h> g^
 nnoremap <S-l> g$
 vnoremap <S-h> g^
@@ -49,8 +49,8 @@ nnoremap <Space>jj :wq<CR>
 nnoremap <C-a> gg<S-v>G
 
 " calc
-nnoremap <Space>+ <C-a>
-nnoremap <Space>- <C-x>
+nnoremap + <C-a>
+nnoremap - <C-x>
 
 " highlight
 nnoremap <Space>nh :noh
