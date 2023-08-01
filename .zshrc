@@ -6,6 +6,7 @@ eval "$(pyenv init -)"
 export PATH=/opt/homebrew/bin:$PATH
 export PATH=/opt/homebrew/opt/node@16/bin:$PATH
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+export XDG_CONFIG_HOME="$HOME/.config" # change lazygit config directory
 
 # for git comfort
 source ~/.git-prompt.sh
@@ -18,6 +19,8 @@ GIT_PS1_SHOWSTASHSTATE=true
 GIT_PS1_SHOWUPSTREAM=auto
 setopt PROMPT_SUBST ; PS1='%F{green}%n@%m%f: %F{cyan}%~%f %F{red}$(__git_ps1 "(%s)")%f\$ '
 
+alias md='mkdir -p'
+alias tc='touch'
 alias b='brew'
 alias bi='brew install'
 alias bic='brew install --cask'
