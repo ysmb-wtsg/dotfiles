@@ -19,10 +19,12 @@
   cob = checkout -b
   cm = commit -m
   cp = cherry-pick
+  d = diff
   f = fetch
   pl = pull
   ps = push
   l = log --graph --date=short --decorate=short --pretty=format:'%Cgreen%h %Creset%cd %Cblue%cn %Cred%d %Creset%s'
+  ln = log --no-merges
   rb = rebase
   rbi = rebase -i
   rbc = rebase --continue
@@ -34,9 +36,6 @@
   sh = stash
   shls = stash list
   shps = stash push
-  shpsm = stash push -m
-  shpsu = stash push -u
-  shpsum = stash push -u -m
   shpp = stash pop
   sha = stash apply
   shd = stash drop
