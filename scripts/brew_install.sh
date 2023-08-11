@@ -24,6 +24,7 @@ formulas=(
     lazygit
     neovim
     node
+    starship
     tree
     wget
     z

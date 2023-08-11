@@ -6,7 +6,6 @@ source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 export XDG_CONFIG_HOME="$HOME/.config" # change lazygit config directory
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
 
 # for git comfort
 source ~/.git-prompt.sh
@@ -48,4 +47,6 @@ alias dv='deactivate'
 alias nvzr='nv ~/.zshrc'
 alias nvgc='nv ~/.gitconfig'
 alias .z='. ~/.zshrc'
+
 eval "$(pyenv init -)"
+eval "$(starship init zsh)"

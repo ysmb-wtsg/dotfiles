@@ -15,5 +15,7 @@ vsc_keybindings="keybindings.json"
 ln -snfv "$(pwd)/$vsc_keybindings" "$HOME/AppData/Roaming/Code/User/$vsc_keybindings"
 # for mac
 ln -snfv "$(pwd)/$vsc_keybindings" "$HOME/Library/Application Support/Code/User/$vsc_keybindings"
+# starship config
+ln -snfv "${PWD%/*}/etc/starship.toml" "$HOME/.config/starship.toml"
 
 echo "create link completed!!!!"
