@@ -1,12 +1,12 @@
 setopt auto_cd
 
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
 export PATH=/opt/homebrew/bin:$PATH
 export PATH=/opt/homebrew/opt/node@16/bin:$PATH
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 export XDG_CONFIG_HOME="$HOME/.config" # change lazygit config directory
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
 
 # for git comfort
 source ~/.git-prompt.sh
