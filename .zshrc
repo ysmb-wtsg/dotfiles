@@ -48,3 +48,4 @@ alias dv='deactivate'
 alias nvzr='nv ~/.zshrc'
 alias nvgc='nv ~/.gitconfig'
 alias .z='. ~/.zshrc'
+eval "$(pyenv init -)"
