@@ -1,0 +1,4 @@
+cdls ()
+{
+\cd "$@" && ls --color=auto
+}

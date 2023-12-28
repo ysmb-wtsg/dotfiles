@@ -8,6 +8,9 @@
 !/.gvimrc
 !/.gitconfig
 !/.zshrc
+!/.zsh_alias
+!/.zsh_export
+!/.zsh_func
 !/settings.json
 !/keybindings.json
 !/.zprofile
