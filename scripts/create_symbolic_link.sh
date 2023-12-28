@@ -3,8 +3,8 @@
 cd ~/dotfiles
 for dotfile in .??*; do
 	[[ $dotfile == ".git" ]] && continue
-	[[ $dotfile == ".gitconfig.local" ]] && continue
 	[[ $dotfile == ".gitignore" ]] && continue
+	[[ $dotfile == ".DS_Store" ]] && continue
 	ln -snfv "$(pwd)/$dotfile" "$HOME/$dotfile"
 done
 
