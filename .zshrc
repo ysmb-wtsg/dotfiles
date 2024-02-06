@@ -55,6 +55,10 @@ if [ -f "/opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh" ]; the
     source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 fi
 
+if [ -f "/opt/homebrew/opt/asdf/libexec/asdf.sh" ]; then
+    source /opt/homebrew/opt/asdf/libexec/asdf.sh
+fi
+
 # for git comfort
 source ~/.git-prompt.sh
 fpath=(~ $fpath)
