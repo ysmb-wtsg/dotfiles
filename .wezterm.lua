@@ -13,6 +13,11 @@ config.font_size = 15
 local act = wezterm.action
 config.keys = {
 	{
+		key = "d",
+		mods = "CMD",
+		action = wezterm.action.CloseCurrentPane({ confirm = true }),
+	},
+	{
 		key = "f",
 		mods = "CMD",
 		action = wezterm.action.ToggleFullScreen,
@@ -39,9 +44,14 @@ config.keys = {
 		action = wezterm.action.SplitHorizontal({ domain = "CurrentPaneDomain" }),
 	},
 	{
+		key = "t",
+		mods = "CMD",
+		action = act.SpawnTab("CurrentPaneDomain"),
+	},
+	{
 		key = "w",
 		mods = "CMD",
-		action = wezterm.action.CloseCurrentPane({ confirm = true }),
+		action = wezterm.action.CloseCurrentTab({ confirm = true }),
 	},
 	{
 		key = "z",
