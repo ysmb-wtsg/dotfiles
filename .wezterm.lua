@@ -27,17 +27,61 @@ config.keys = {
 		mods = "CMD",
 		action = act.ActivatePaneDirection("Left"),
 	},
-	{ key = "h", mods = "CMD|SHIFT", action = act.ActivateTabRelative(-1) },
-	{ key = "j", mods = "CMD", action = wezterm.action({ ScrollByLine = 1 }) },
-	{ key = "j", mods = "CMD|SHIFT", action = wezterm.action({ ScrollByPage = 1 }) },
-	{ key = "k", mods = "CMD", action = wezterm.action({ ScrollByLine = -1 }) },
-	{ key = "k", mods = "CMD|SHIFT", action = wezterm.action({ ScrollByPage = -1 }) },
+	{
+		key = "h",
+		mods = "CMD|SHIFT",
+		action = act.ActivateTabRelative(-1),
+	},
+	{
+		key = "h",
+		mods = "CTRL",
+		action = wezterm.action.SendKey({ key = "LeftArrow" }),
+	},
+	{
+		key = "j",
+		mods = "CMD",
+		action = wezterm.action({ ScrollByLine = 1 }),
+	},
+	{
+		key = "j",
+		mods = "CMD|SHIFT",
+		action = wezterm.action({ ScrollByPage = 1 }),
+	},
+	{
+		key = "j",
+		mods = "CTRL",
+		action = wezterm.action.SendKey({ key = "DownArrow" }),
+	},
+	{
+		key = "k",
+		mods = "CMD",
+		action = wezterm.action({ ScrollByLine = -1 }),
+	},
+	{
+		key = "k",
+		mods = "CMD|SHIFT",
+		action = wezterm.action({ ScrollByPage = -1 }),
+	},
+	{
+		key = "k",
+		mods = "CTRL",
+		action = wezterm.action.SendKey({ key = "UpArrow" }),
+	},
 	{
 		key = "l",
 		mods = "CMD",
 		action = act.ActivatePaneDirection("Right"),
 	},
-	{ key = "l", mods = "CMD|SHIFT", action = act.ActivateTabRelative(1) },
+	{
+		key = "l",
+		mods = "CTRL",
+		action = wezterm.action.SendKey({ key = "RightArrow" }),
+	},
+	{
+		key = "l",
+		mods = "CMD|SHIFT",
+		action = act.ActivateTabRelative(1),
+	},
 	{
 		key = "p",
 		mods = "CMD",
