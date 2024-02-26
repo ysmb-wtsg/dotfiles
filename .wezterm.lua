@@ -34,7 +34,7 @@ config.keys = {
 	},
 	{
 		key = "h",
-		mods = "CTRL",
+		mods = "CTRL|CMD",
 		action = wezterm.action.SendKey({ key = "LeftArrow" }),
 	},
 	{
@@ -49,7 +49,7 @@ config.keys = {
 	},
 	{
 		key = "j",
-		mods = "CTRL",
+		mods = "CTRL|CMD",
 		action = wezterm.action.SendKey({ key = "DownArrow" }),
 	},
 	{
@@ -64,7 +64,7 @@ config.keys = {
 	},
 	{
 		key = "k",
-		mods = "CTRL",
+		mods = "CTRL|CMD",
 		action = wezterm.action.SendKey({ key = "UpArrow" }),
 	},
 	{
@@ -74,7 +74,7 @@ config.keys = {
 	},
 	{
 		key = "l",
-		mods = "CTRL",
+		mods = "CTRL|CMD",
 		action = wezterm.action.SendKey({ key = "RightArrow" }),
 	},
 	{
