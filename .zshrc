@@ -8,6 +8,7 @@ export XDG_CONFIG_HOME="$HOME/.config" # change lazygit config directory
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 export DOCKER_HOST="unix://$HOME/.colima/default/docker.sock"
+export LANG="en_us.UTF-8"
 
 cdls ()
 {
@@ -70,5 +71,4 @@ GIT_PS1_SHOWSTASHSTATE=true
 GIT_PS1_SHOWUPSTREAM=auto
 setopt PROMPT_SUBST ; PS1='%F{green}%n@%m%f: %F{cyan}%~%f %F{red}$(__git_ps1 "(%s)")%f\$ '
 
-eval "$(anyenv init -)"
 eval "$(starship init zsh)"
