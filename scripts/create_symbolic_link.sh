@@ -17,9 +17,6 @@ ln -snfv "$HOME/dotfiles/etc/$vsc_keybindings" "$HOME/AppData/Roaming/Code/User/
 # for mac
 ln -snfv "$HOME/dotfiles/etc/$vsc_keybindings" "$HOME/Library/Application Support/Code/User/$vsc_keybindings"
 
-# iterm config
-cp -f "$HOME/dotfiles/etc/com.googlecode.iterm2.plist" ~/Library/Preferences
-
 # starship config
 ln -snfv "$HOME/dotfiles/etc/starship.toml" "$HOME/.config/starship.toml"
 
