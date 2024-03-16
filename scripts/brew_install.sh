@@ -1,59 +1,32 @@
 #!/bin/bash -e
 
-echo "installing homebrew..."
-which brew >/dev/null 2>&1 || /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-export PATH=/opt/homebrew/sbin:$PATH
-export PATH=/opt/homebrew/bin:$PATH
-
-echo "run brew doctor..."
-which brew >/dev/null 2>&1 && brew doctor
-
-echo "run brew update..."
-which brew >/dev/null 2>&1 && brew update
-
-echo "ok. run brew upgrade..."
-
-formulas=(
-    awscli
-    cask
-    colima
-    curl
-    docker
-    docker-compose
-    git
-    lazygit
-    neovim
-    node
-    starship
-    tree
-    wget
-    z
-    zsh-completions
-    zsh-autosuggestions
-)
-
 echo "brew tap..."
 brew tap sanemat/font
 brew tap homebrew/cask-fonts
 
-echo "start brew install apps..."
-for formula in "${formulas[@]}"; do
-    brew install $formula || brew upgrade $formula
-done
+DOTFILES_PATH=~/dotfiles
+FORMULAE_LIST="$DOTFILES_PATH/.brew_formulae"
+CASK_LIST="$DOTFILES_PATH/.brew_cask"
 
-casks=(
-    font-hack-nerd-font
-    google-chrome
-    iterm2
-    karabiner-elements
-    raycast
-    visual-studio-code
-)
+if [ ! -f "$FORMULAE_LIST" ]; then
+    echo ".brew_formulae not found: $FORMULAE_LIST"
+    exit 1
+fi
 
-echo "start brew cask install apps..."
-for cask in "${casks[@]}"; do
-    brew install $cask --cask
-done
+if [ ! -f "$CASK_LIST" ]; then
+    echo ".brew_cask not found: $CASK_LIST"
+    exit 1
+fi
+
+while IFS= read -r package; do
+    echo "Installing $package..."
+    brew install "$package"
+done < "$FORMULAE_LIST"
+
+while IFS= read -r package; do
+    echo "Installing $package..."
+    brew install --cask "$package"
+done < "$CASK_LIST"
 
 brew cleanup
 

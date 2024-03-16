@@ -2,6 +2,8 @@
 
 !/.bash_profile
 !/.bashrc
+!/.brew_formulae
+!/.brew_cask
 !/.config
 !/.git-completion.bash
 !/.vimrc
