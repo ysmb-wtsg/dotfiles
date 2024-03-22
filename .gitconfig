@@ -8,6 +8,7 @@
   rebase = false
 [alias]
   ai = add -i
+  ar = "!f() { repository_name=$(basename `git rev-parse --show-toplevel`); git archive --output=\"${repository_name}.zip\" HEAD; }; f"
   alias = !git config --get-regexp alias |  sed 's/^alias.//g' | sed 's/ / = /1'
   b = branch
   ba = branch -a -vv
