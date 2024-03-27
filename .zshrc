@@ -15,8 +15,16 @@ cdls ()
 \cd "$@" && ls --color=auto
 }
 
+tc_md() {
+    if [[ "$1" == *"/"* ]]; then
+        mkdir -p "$1"
+    else
+        touch "$1"
+    fi
+}
+
 alias md='mkdir -p'
-alias tc='touch'
+alias tc='tc_md'
 alias b='brew'
 alias bi='brew install'
 alias bic='brew install --cask'
@@ -40,6 +48,7 @@ alias nvnv='nvim ~/.config/nvim'
 alias py='python'
 alias pe='pyenv'
 alias pp='pip'
+alias rm='rm -r'
 alias sshkg='ssh-keygen'
 alias ve='python -m venv'
 alias av='activate .vnev/bin/activate'
