@@ -80,4 +80,8 @@ GIT_PS1_SHOWSTASHSTATE=true
 GIT_PS1_SHOWUPSTREAM=auto
 setopt PROMPT_SUBST ; PS1='%F{green}%n@%m%f: %F{cyan}%~%f %F{red}$(__git_ps1 "(%s)")%f\$ '
 
+if ! colima status > /dev/null 2>&1; then
+    colima start
+fi
+
 eval "$(starship init zsh)"
