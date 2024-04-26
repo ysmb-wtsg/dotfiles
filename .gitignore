@@ -10,8 +10,6 @@
 !/.gvimrc
 !/.gitconfig
 !/.zshrc
-!/settings.json
-!/keybindings.json
 !/.zprofile
 !/.zlogout
 !/.git-prompt.sh
@@ -19,6 +17,7 @@
 !/.wezterm.lua
 
 !/install.sh
+!/dump.sh
 !scripts/
 !/etc
 

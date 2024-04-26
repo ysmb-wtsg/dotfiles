@@ -1,4 +1,5 @@
 #!/usr/bin bash
 
-bash ./scripts/brew_install.sh
-bash ./scripts/create_symbolic_link.sh
+sh ./scripts/brew_install.sh
+sh ./scripts/create_symbolic_link.sh
+sh ./scripts/install_vsc_extensions.sh
