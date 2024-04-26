@@ -1,4 +1,5 @@
 {
+    "workbench.editor.enablePreview": false,
     "files.trimTrailingWhitespace": true,
     "editor.renderWhitespace": "all",
     "editor.minimap.enabled": false,
@@ -24,10 +25,79 @@
     "vim.normalModeKeyBindingsNonRecursive": [
         {
             "before": [
+                "<C-a>"
+            ],
+            "after": [
+                "g",
+                "g",
+                "<S-v>",
+                "G"
+            ]
+        },
+        {
+            "before": [
                 ";"
             ],
             "after": [
                 ":"
+            ]
+        },
+        {
+            "before": [
+                "f"
+            ],
+            "after": [
+                "leader",
+                "leader",
+                "leader",
+                "b",
+                "d",
+                "w"
+            ]
+        },
+        {
+            "before": [
+                "o",
+                "o"
+            ],
+            "after": [
+                "o",
+                "<Esc>"
+            ]
+        },
+        {
+            "before": [
+                "o",
+                "i"
+            ],
+            "after": [
+                "o"
+            ]
+        },
+        {
+            "before": [
+                "s"
+            ],
+            "after": [
+                "\"",
+                "_",
+                "s"
+            ]
+        },
+        {
+            "before": [
+                "u"
+            ],
+            "commands": [
+                "undo"
+            ]
+        },
+        {
+            "before": [
+                "<C-r>"
+            ],
+            "commands": [
+                "redo"
             ]
         },
         {
@@ -48,68 +118,12 @@
         },
         {
             "before": [
-                "f"
-            ],
-            "after": [
-                "leader",
-                "leader",
-                "leader",
-                "b",
-                "d",
-                "w"
-            ]
-        },
-        {
-            "before": [
-                "leader",
-                "r",
-                "p"
-            ],
-            "after": [
-                ":",
-                "%",
-                "s",
-                "/"
-            ]
-        },
-        {
-            "before": [
-                "u"
-            ],
-            "commands": [
-                {
-                    "command": "undo"
-                }
-            ]
-        },
-        {
-            "before": [
-                "<C-r>"
-            ],
-            "commands": [
-                {
-                    "command": "redo"
-                }
-            ]
-        },
-        {
-            "before": [
                 "x"
             ],
             "after": [
                 "\"",
                 "_",
                 "x"
-            ]
-        },
-        {
-            "before": [
-                "s"
-            ],
-            "after": [
-                "\"",
-                "_",
-                "s"
             ]
         },
         {
@@ -193,48 +207,7 @@
                 "c"
             ],
             "commands": [
-                {
-                    "command": "editor.action.commentLine"
-                }
-            ]
-        },
-        {
-            "before": [
-                "<Leader>",
-                "w"
-            ],
-            "after": [],
-            "commands": [
-                {
-                    "command": "workbench.action.files.save",
-                    "args": []
-                }
-            ]
-        },
-        {
-            "before": [
-                "<Leader>",
-                "q"
-            ],
-            "after": [],
-            "commands": [
-                {
-                    "command": "workbench.action.closeActiveEditor",
-                    "args": []
-                }
-            ]
-        },
-        {
-            "before": [
-                "<Leader>",
-                "i"
-            ],
-            "after": [],
-            "commands": [
-                {
-                    "command": "editor.action.formatDocument",
-                    "args": []
-                }
+                "editor.action.commentLine"
             ]
         },
         {
@@ -251,6 +224,73 @@
             ],
             "after": [
                 "^"
+            ]
+        },
+        {
+            "before": [
+                "<Enter>"
+            ],
+            "commands": [
+                "expand_region"
+            ]
+        },
+        {
+            "before": [
+                "/"
+            ],
+            "commands": [
+                "actions.find"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "s",
+                "v"
+            ],
+            "commands": [
+                "workbench.action.splitEditor"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "r",
+                "p"
+            ],
+            "after": [
+                ":",
+                "%",
+                "s",
+                "/"
+            ]
+        },
+        {
+            "before": [
+                "<Leader>",
+                "w"
+            ],
+            "after": [],
+            "commands": [
+                "workbench.action.files.save"
+            ]
+        },
+        {
+            "before": [
+                "<Leader>",
+                "q"
+            ],
+            "commands": [
+                "workbench.action.closeActiveEditor"
+            ]
+        },
+        {
+            "before": [
+                "<Leader>",
+                "i"
+            ],
+            "commands": [
+                "editor.action.formatDocument"
             ]
         },
         {
@@ -339,22 +379,6 @@
             ],
             "commands": [
                 "markdown.showPreviewToSide"
-            ]
-        },
-        {
-            "before": [
-                "<Enter>"
-            ],
-            "commands": [
-                "expand_region"
-            ]
-        },
-        {
-            "before": [
-                "/"
-            ],
-            "commands": [
-                "actions.find"
             ]
         }
     ],
