@@ -15,7 +15,7 @@ done < "$EXTENSION_LIST"
 cat << END
 
 **************************************************
-EXTENSIONS INSTALLED! bye.
+!!!!!!!!!!!!VSC EXTENSIONS INSTALLED!!!!!!!!!!!!!!
 **************************************************
 
 END

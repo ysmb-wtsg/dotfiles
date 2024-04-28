@@ -3,3 +3,11 @@
 DOTFILES_PATH=~/dotfiles
 brew list --formulae > $DOTFILES_PATH/.brew_formulae
 brew list --cask > $DOTFILES_PATH/.brew_cask
+
+cat << END
+
+**************************************************
+!!!!!!!!!!!!!!!BREW PACKAGES DUMPED!!!!!!!!!!!!!!!
+**************************************************
+
+END

@@ -11,16 +11,24 @@ done
 ln -snfv "$(pwd)/_git" "$HOME/_git"
 
 # keybinds & settings for vscode
-vsc_keybindings="keybindings.json"
-vsc_settings="settings.json"
+path_to_vsc_configs="$HOME/AppData/Roaming/Code/User"
 # for windows
-ln -snfv "$HOME/dotfiles/etc/$vsc_keybindings" "$HOME/AppData/Roaming/Code/User/$vsc_keybindings"
-ln -snfv "$HOME/dotfiles/etc/$vsc_settings" "$HOME/AppData/Roaming/Code/User/$vsc_settings"
-# for mac
-ln -snfv "$HOME/dotfiles/etc/$vsc_keybindings" "$HOME/Library/Application Support/Code/User/$vsc_keybindings"
-ln -snfv "$HOME/dotfiles/etc/$vsc_settings" "$HOME/Library/Application Support/Code/User/$vsc_settings"
+if [ -d $path_to_vsc_configs ]; then
+  ln -snfv "$HOME/dotfiles/etc/keybindngs.json" "$HOME/AppData/Roaming/Code/User/keybindings.json"
+  ln -snfv "$HOME/dotfiles/etc/settings.json" "$HOME/AppData/Roaming/Code/User/settings.json"
+else
+  # for mac
+  ln -snfv "$HOME/dotfiles/etc/$vsc_keybindings" "$HOME/Library/Application Support/Code/User/$vsc_keybindings"
+  ln -snfv "$HOME/dotfiles/etc/$vsc_settings" "$HOME/Library/Application Support/Code/User/$vsc_settings"
+fi
 
 # starship config
 ln -snfv "$HOME/dotfiles/etc/starship.toml" "$HOME/.config/starship.toml"
 
-echo "create link completed!!!!"
+cat << END
+
+**************************************************
+!!!!!!!!!!!!!!SYMBOLIC LINK CREATED!!!!!!!!!!!!!!!
+**************************************************
+
+END
