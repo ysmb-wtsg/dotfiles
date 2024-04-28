@@ -5,16 +5,16 @@ brew tap sanemat/font
 brew tap homebrew/cask-fonts
 
 DOTFILES_PATH=~/dotfiles
-FORMULAE_LIST="$DOTFILES_PATH/.brew_formulae"
-CASK_LIST="$DOTFILES_PATH/.brew_cask"
+FORMULAE_LIST="$DOTFILES_PATH/ect/brew_formulae"
+CASK_LIST="$DOTFILES_PATH/etc/brew_cask"
 
 if [ ! -f "$FORMULAE_LIST" ]; then
-    echo ".brew_formulae not found: $FORMULAE_LIST"
+    echo "brew_formulae not found: $FORMULAE_LIST"
     exit 1
 fi
 
 if [ ! -f "$CASK_LIST" ]; then
-    echo ".brew_cask not found: $CASK_LIST"
+    echo "brew_cask not found: $CASK_LIST"
     exit 1
 fi
 
