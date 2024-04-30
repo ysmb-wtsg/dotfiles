@@ -69,9 +69,9 @@ if [ -f "/opt/homebrew/opt/asdf/libexec/asdf.sh" ]; then
     source /opt/homebrew/opt/asdf/libexec/asdf.sh
 fi
 
-if command -v poetry &>/dev/null; then
+if ! command -v poetry &>/dev/null; then
     curl -sSL https://install.python-poetry.org | python -
-    export 'export PATH="$HOME/.local/bin:$PATH"'
+    export PATH="$HOME/.local/bin:$PATH"
 fi
 
 # for git comfort

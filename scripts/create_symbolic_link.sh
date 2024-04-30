@@ -18,8 +18,8 @@ if [ -d $path_to_vsc_configs ]; then
   ln -snfv "$HOME/dotfiles/etc/settings.json" "$HOME/AppData/Roaming/Code/User/settings.json"
 else
   # for mac
-  ln -snfv "$HOME/dotfiles/etc/$vsc_keybindings" "$HOME/Library/Application Support/Code/User/$vsc_keybindings"
-  ln -snfv "$HOME/dotfiles/etc/$vsc_settings" "$HOME/Library/Application Support/Code/User/$vsc_settings"
+  ln -snfv "$HOME/dotfiles/etc/keybindings.json" "$HOME/Library/Application Support/Code/User/keybindings.json"
+  ln -snfv "$HOME/dotfiles/etc/settings.json" "$HOME/Library/Application Support/Code/User/settings.json"
 fi
 
 # starship config
