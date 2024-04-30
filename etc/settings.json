@@ -380,6 +380,26 @@
             "commands": [
                 "markdown.showPreviewToSide"
             ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "r",
+                "n"
+            ],
+            "commands": [
+                "editor.action.rename"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "t",
+                "w"
+            ],
+            "commands": [
+                "workbench.actions.view.problems"
+            ]
         }
     ],
     "vim.insertModeKeyBindingsNonRecursive": [
@@ -418,6 +438,15 @@
             ],
             "after": [
                 "<C-u>"
+            ]
+        },
+        {
+            "before": [
+                "s"
+            ],
+            "after": [
+                "g",
+                "r"
             ]
         },
         {
