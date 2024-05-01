@@ -25,6 +25,9 @@ fi
 # starship config
 ln -snfv "$HOME/dotfiles/etc/starship.toml" "$HOME/.config/starship.toml"
 
+# lazygit
+ln -snfv "$HOME/dotfiles/.config/lazygit/config.yml" "$HOME/.config/lazygit/config.yml"
+
 cat << END
 
 **************************************************

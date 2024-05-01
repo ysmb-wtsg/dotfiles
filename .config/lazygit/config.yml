@@ -1,0 +1,18 @@
+gui:
+  showIcons: true
+git:
+  branchLogCmd: "git log --graph --color=always --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' {{branchName}} --"
+  allBranchesLogCmd: "git log --graph --color=always --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --all"
+customCommands:
+  - key: "a"
+    description: "archive branch"
+    context: "localBranches"
+    command: 'repository_name=$(basename `git rev-parse --show-toplevel`) && git archive --output="${repository_name}.zip" HEAD;'
+  - key: "<C-p>"
+    description: "pull (force)"
+    context: "localBranches"
+    command: 'git stash save "stashed by force pull" && git fetch && git reset --hard origin/$(git rev-parse --abbrev-ref @)'
+    prompts:
+      - type: "confirm"
+        title: "pull force"
+        body: "Are you sure you want to force pull? (Your local changes will be stashed.)"
