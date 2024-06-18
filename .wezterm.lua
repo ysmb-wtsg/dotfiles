@@ -15,12 +15,12 @@ config.keys = {
 	{
 		key = "d",
 		mods = "CMD",
-		action = wezterm.action.CloseCurrentPane({ confirm = true }),
+		action = act.CloseCurrentPane({ confirm = true }),
 	},
 	{
 		key = "f",
 		mods = "CMD",
-		action = wezterm.action.ToggleFullScreen,
+		action = act.ToggleFullScreen,
 	},
 	{
 		key = "h",
@@ -35,37 +35,37 @@ config.keys = {
 	{
 		key = "h",
 		mods = "CTRL|CMD",
-		action = wezterm.action.SendKey({ key = "LeftArrow" }),
+		action = act.SendKey({ key = "LeftArrow" }),
 	},
 	{
 		key = "j",
 		mods = "CMD",
-		action = wezterm.action({ ScrollByLine = 1 }),
+		action = act({ ScrollByLine = 1 }),
 	},
 	{
 		key = "j",
 		mods = "CMD|SHIFT",
-		action = wezterm.action({ ScrollByPage = 1 }),
+		action = act({ ScrollByPage = 1 }),
 	},
 	{
 		key = "j",
 		mods = "CTRL|CMD",
-		action = wezterm.action.SendKey({ key = "DownArrow" }),
+		action = act.SendKey({ key = "DownArrow" }),
 	},
 	{
 		key = "k",
 		mods = "CMD",
-		action = wezterm.action({ ScrollByLine = -1 }),
+		action = act({ ScrollByLine = -1 }),
 	},
 	{
 		key = "k",
 		mods = "CMD|SHIFT",
-		action = wezterm.action({ ScrollByPage = -1 }),
+		action = act({ ScrollByPage = -1 }),
 	},
 	{
 		key = "k",
 		mods = "CTRL|CMD",
-		action = wezterm.action.SendKey({ key = "UpArrow" }),
+		action = act.SendKey({ key = "UpArrow" }),
 	},
 	{
 		key = "l",
@@ -75,7 +75,7 @@ config.keys = {
 	{
 		key = "l",
 		mods = "CTRL|CMD",
-		action = wezterm.action.SendKey({ key = "RightArrow" }),
+		action = act.SendKey({ key = "RightArrow" }),
 	},
 	{
 		key = "l",
@@ -85,22 +85,24 @@ config.keys = {
 	{
 		key = "p",
 		mods = "CMD",
-		action = wezterm.action.SplitHorizontal({ domain = "CurrentPaneDomain" }),
+		action = act.SplitHorizontal({ domain = "CurrentPaneDomain" }),
 	},
 	{
 		key = "t",
 		mods = "CMD",
-		action = act.SpawnTab("CurrentPaneDomain"),
+		action = act.SpawnCommandInNewTab({
+			cwd = wezterm.home_dir,
+		}),
 	},
 	{
 		key = "w",
 		mods = "CMD",
-		action = wezterm.action.CloseCurrentTab({ confirm = true }),
+		action = act.CloseCurrentTab({ confirm = true }),
 	},
 	{
 		key = "z",
 		mods = "CMD",
-		action = wezterm.action.TogglePaneZoomState,
+		action = act.TogglePaneZoomState,
 	},
 }
 
