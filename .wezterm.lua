@@ -97,7 +97,7 @@ config.keys = {
 	{
 		key = "w",
 		mods = "CMD",
-		action = act.CloseCurrentTab({ confirm = true }),
+		action = act.CloseCurrentTab({ confirm = false }),
 	},
 	{
 		key = "z",
