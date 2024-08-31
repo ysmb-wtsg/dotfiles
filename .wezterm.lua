@@ -6,6 +6,11 @@ if wezterm.config_builder then
 	config = wezterm.config_builder()
 end
 
+config.initial_cols = 120
+config.initial_rows = 32
+
+config.window_decorations = "RESIZE"
+
 config.color_scheme = "Ayu Dark (Gogh)"
 
 config.font_size = 15
