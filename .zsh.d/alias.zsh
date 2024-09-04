@@ -11,6 +11,14 @@ tc_md() {
     fi
 }
 
+c() {
+  carbonyl "http://$1"
+}
+
+cs() {
+  carbonyl "https://$1"
+}
+
 alias .z='. ~/.zshrc'
 alias av='activate .vnev/bin/activate'
 alias b='brew'
@@ -19,7 +27,6 @@ alias bic='brew install --cask'
 alias bl='brew list'
 alias bs='brew search'
 alias bu='brew uninstall'
-alias c='carbonyl'
 alias cd="cdls"
 alias d='docker'
 alias dc='docker-compose'
