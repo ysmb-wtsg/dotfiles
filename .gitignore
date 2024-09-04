@@ -15,6 +15,7 @@
 !/.git-prompt.sh
 !/_git
 !/.wezterm.lua
+!/.zsh.d/
 
 !/install.sh
 !/dump.sh

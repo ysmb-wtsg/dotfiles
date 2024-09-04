@@ -1,87 +1,17 @@
-LANG="en_US.UTF-8"
-setopt auto_cd
-set -o vi
+ZSHHOME="${HOME}/.zsh.d"
 
-export PATH=/opt/homebrew/bin:$PATH
-export PATH=/opt/homebrew/opt/node@16/bin:$PATH
-export XDG_CONFIG_HOME="$HOME/.config" # change lazygit config directory
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-export DOCKER_HOST="unix://$HOME/.colima/default/docker.sock"
-export LANG="en_us.UTF-8"
+if [ -d $ZSHHOME -a -r $ZSHHOME -a -x $ZSHHOME ]; then
+  # evalは最後に実行する
+  eval_file=""
+    for i in $ZSHHOME/*; do
+      if [[ ${i##*/} = "eval.zsh" ]]; then
+        eval_file=$i
+      else
+        [[ ${i##*/} = *.zsh ]] && [ \( -f $i -o -h $i \) -a -r $i ] && . $i
+      fi
+    done
 
-cdls ()
-{
-\cd "$@" && ls --color=auto
-}
-
-tc_md() {
-    if [[ "$1" == *"/"* ]]; then
-        mkdir -p "$1"
-    else
-        touch "$1"
+    if [ -n "$eval_file" ]; then
+      . $eval_file
     fi
-}
-
-alias md='mkdir -p'
-alias tc='tc_md'
-alias b='brew'
-alias bi='brew install'
-alias bic='brew install --cask'
-alias bl='brew list'
-alias bs='brew search'
-alias bu='brew uninstall'
-alias cd="cdls"
-alias d='docker'
-alias dp='docker ps'
-alias di='docker images'
-alias dr='docker rm'
-alias dri='docker rmi'
-alias dc='docker-compose'
-alias dcu='docker-compose up'
-alias dcd='docker-compose down'
-alias g='git'
-alias o='open'
-alias lg='lazygit'
-alias nv='nvim'
-alias nvnv='nvim ~/.config/nvim'
-alias py='python'
-alias pe='pyenv'
-alias pp='pip'
-alias rm='rm -r'
-alias sshkg='ssh-keygen'
-alias ve='python -m venv'
-alias av='activate .vnev/bin/activate'
-alias dv='deactivate'
-alias nvzr='nv ~/.zshrc'
-alias nvgc='nv ~/.gitconfig'
-alias .z='. ~/.zshrc'
-
-if [ -f "openai_api_key" ]; then
-    export OPENAI_API_KEY=$(cat "openai_api_key")
 fi
-
-if [ -f "/opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh" ]; then
-    source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-fi
-
-if [ -f "/opt/homebrew/opt/asdf/libexec/asdf.sh" ]; then
-    source /opt/homebrew/opt/asdf/libexec/asdf.sh
-fi
-
-# for git comfort
-source ~/.git-prompt.sh
-fpath=(~ $fpath)
-zstyle ':completion:*:*:git:*' script ~/.git-completion.bash
-autoload -Uz compinit && compinit
-GIT_PS1_SHOWDIRTYSTATE=true
-GIT_PS1_SHOWUNTRACKEDFILES=true
-GIT_PS1_SHOWSTASHSTATE=true
-GIT_PS1_SHOWUPSTREAM=auto
-setopt PROMPT_SUBST ; PS1='%F{green}%n@%m%f: %F{cyan}%~%f %F{red}$(__git_ps1 "(%s)")%f\$ '
-
-if ! colima status > /dev/null 2>&1; then
-    colima start
-fi
-
-eval "$(starship init zsh)"
