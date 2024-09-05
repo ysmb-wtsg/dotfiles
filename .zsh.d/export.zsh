@@ -3,6 +3,8 @@ export LANG="en_us.UTF-8"
 export PATH="/opt/homebrew/bin:$PATH"
 export PATH="/opt/homebrew/opt/node@16/bin:$PATH"
 export PATH="$PYENV_ROOT/bin:$PATH"
+export PATH="$POETRY_ROOT/bin:$PATH"
+export POETRY_ROOT="$HOME/.local/"
 export PYENV_ROOT="$HOME/.pyenv"
 export XDG_CONFIG_HOME="$HOME/.config" # change lazygit config directory
 
