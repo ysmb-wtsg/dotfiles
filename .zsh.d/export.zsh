@@ -8,8 +8,8 @@ export POETRY_ROOT="$HOME/.local/"
 export PYENV_ROOT="$HOME/.pyenv"
 export XDG_CONFIG_HOME="$HOME/.config" # change lazygit config directory
 
-if [ -f "openai_api_key" ]; then
-    export OPENAI_API_KEY=$(cat "openai_api_key")
+if [ -f "$HOME/openai_api_key" ]; then
+    export OPENAI_API_KEY=$(cat "$HOME/openai_api_key")
 fi
 
 if [ -f "/opt/homebrew/opt/asdf/libexec/asdf.sh" ]; then
