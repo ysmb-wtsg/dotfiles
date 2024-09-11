@@ -1,8 +1,3 @@
-cdls ()
-{
-\cd "$@" && ls --color=auto
-}
-
 tc_md() {
     if [[ "$1" == *"/"* ]]; then
         mkdir -p "$1"
@@ -27,7 +22,6 @@ alias bic='brew install --cask'
 alias bl='brew list'
 alias bs='brew search'
 alias bu='brew uninstall'
-alias cd="cdls"
 alias d='docker'
 alias dc='docker-compose'
 alias dcd='docker-compose down'
@@ -40,6 +34,10 @@ alias dv='deactivate'
 alias e='exit'
 alias g='git'
 alias lg='lazygit'
+alias ls="eza --icons --git"
+alias la="eza -a --icons --git"
+alias ll="eza -aahl --icons --git"
+alias tree="eza -T -L 3 -a -I 'node_modules|.git|.cache' --icons"
 alias md='mkdir -p'
 alias nv='nvim'
 alias nvgc='nv ~/.gitconfig'
@@ -55,3 +53,9 @@ alias t='tmux'
 alias tc='tc_md'
 alias tk='tmux kill-server'
 alias ve='python -m venv'
+
+cdls ()
+{
+\cd "$@" && ls --color=auto
+}
+alias cd="cdls"
