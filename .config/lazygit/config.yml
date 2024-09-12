@@ -16,3 +16,11 @@ customCommands:
       - type: "confirm"
         title: "pull force"
         body: "Are you sure you want to force pull? (Your local changes will be stashed.)"
+  - key: "<C-c>"
+    description: "commit empty"
+    context: "files"
+    command: 'git commit --allow-empty -m '
+    prompts:
+      - type: "input"
+        title: "commit message"
+        key: "Message"
