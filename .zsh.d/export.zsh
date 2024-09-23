@@ -11,11 +11,3 @@ export DOCKER_HOST="unix://$DOCKER_SOCKET_PATH"
 if [ -f "$HOME/openai_api_key" ]; then
     export OPENAI_API_KEY=$(cat "$HOME/openai_api_key")
 fi
-
-if [ -f "/opt/homebrew/opt/asdf/libexec/asdf.sh" ]; then
-    source /opt/homebrew/opt/asdf/libexec/asdf.sh
-fi
-
-if [ -f "/opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh" ]; then
-    source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-fi
