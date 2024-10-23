@@ -19,7 +19,7 @@ customCommands:
   - key: "<C-c>"
     description: "commit empty"
     context: "files"
-    command: 'git commit --allow-empty -m '
+    command: "git commit --allow-empty -m {{.Form.Message}}"
     prompts:
       - type: "input"
         title: "commit message"
