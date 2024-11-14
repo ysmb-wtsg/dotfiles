@@ -1,4 +1,5 @@
 export XDG_CONFIG_HOME="$HOME/.config" # change lazygit config directory
+export DOCKER_CONFIG=${DOCKER_CONFIG:-$HOME/.docker}
 export POETRY_ROOT="$HOME/.local/"
 export LANG="en_us.UTF-8"
 export PATH="/opt/homebrew/bin:$PATH"
