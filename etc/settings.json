@@ -11,8 +11,6 @@
     "statusBar.foreground": "#ffffff",
     "statusBar.debuggingForeground": "#ffffff"
   },
-  "vscode-neovim.neovimExecutablePaths.darwin": "/opt/homebrew/bin/nvim",
-  "vscode-neovim.neovimInitVimPaths.darwin": "/Users/user/.config/nvim/init.lua",
   "vim.easymotion": true,
   "vim.replaceWithRegister": true,
   "vim.smartRelativeLine": true,
@@ -25,6 +23,10 @@
   "vim.hlsearch": true,
   "vim.leader": "<space>",
   "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["g", "t"],
+      "commands": ["problems.action.openToSide"]
+    },
     {
       "before": ["g", "d"],
       "commands": ["editor.action.revealDefinitionAside"]
@@ -260,6 +262,6 @@
     }
   ],
   "workbench.startupEditor": "none",
-  "workbench.colorTheme": "TokyoNight-Theme"
+  "workbench.colorTheme": "Ayu Dark Bordered"
 }
 
