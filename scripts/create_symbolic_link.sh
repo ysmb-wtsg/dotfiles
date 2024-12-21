@@ -28,7 +28,7 @@ fi
 ln -snfv "$DOTFILES_PATH/etc/starship.toml" "$HOME/.config/starship.toml"
 
 # lazygit
-ln -snfv "$DOTFILES_PATH/.config/lazygit/config.yml" "$HOME/.config/lazygit/config.yml"
+ln -snfv "$DOTFILES_PATH/.config" "$HOME/.config"
 
 cat <<END
 

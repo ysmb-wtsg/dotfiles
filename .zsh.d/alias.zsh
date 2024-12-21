@@ -14,6 +14,15 @@ cs() {
   carbonyl "https://$1"
 }
 
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	yazi "$@" --cwd-file="$tmp"
+	if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+		builtin cd -- "$cwd"
+	fi
+	rm -f -- "$tmp"
+}
+
 alias .z='. ~/.zshrc'
 alias av='activate .vnev/bin/activate'
 alias b='brew'
@@ -59,3 +68,4 @@ cdls ()
 \cd "$@" && ls --color=auto
 }
 alias cd="cdls"
+
