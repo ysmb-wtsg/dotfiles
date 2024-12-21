@@ -1,5 +1,4 @@
 #!/usr/bash
 
-sh ./scripts/brew_dump.sh
-sh ./scripts/vsc_extensions_dump.sh
-
+sh ./scripts/dump_brew.sh.sh
+sh ./scripts/dump_vsc_extensions.sh.sh
