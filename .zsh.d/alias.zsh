@@ -62,6 +62,11 @@ alias t='tmux'
 alias tc='tc_md'
 alias tk='tmux kill-server'
 alias ve='python -m venv'
+alias y='yarn'
+alias yi='yarn install'
+alias ya='yarn add'
+alias yd='yarn dev'
+alias yr='yarn run'
 
 cdls ()
 {
