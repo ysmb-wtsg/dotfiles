@@ -3,7 +3,6 @@ export DOCKER_CONFIG=${DOCKER_CONFIG:-$HOME/.docker}
 export POETRY_ROOT="$HOME/.local/"
 export LANG="en_us.UTF-8"
 export PATH="/opt/homebrew/bin:$PATH"
-export PATH="/opt/homebrew/opt/node@16/bin:$PATH"
 export PATH="$POETRY_ROOT/bin:$PATH"
 
 DOCKER_SOCKET_PATH="$XDG_CONFIG_HOME/colima/default/docker.sock"
