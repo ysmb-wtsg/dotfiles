@@ -394,5 +394,5 @@
     "key": "down",
     "command": "-workbench.action.terminal.chat.nextFromHistory",
     "when": "terminalChatFocus && !suggestWidgetVisible"
-  },
+  }
 ]
