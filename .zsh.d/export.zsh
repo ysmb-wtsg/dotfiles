@@ -11,3 +11,7 @@ export DOCKER_HOST="unix://$DOCKER_SOCKET_PATH"
 if [ -f "$HOME/openai_api_key" ]; then
     export OPENAI_API_KEY=$(cat "$HOME/openai_api_key")
 fi
+
+if [ -f "$HOME/anthropic_api_key" ]; then
+    export ANTHROPIC_API_KEY=$(cat "$HOME/anthropic_api_key")
+fi
