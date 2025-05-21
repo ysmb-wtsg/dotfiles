@@ -32,6 +32,10 @@ end)
 
 config.color_scheme = "Ayu Dark (Gogh)"
 
+config.font = wezterm.font_with_fallback({
+	{ family = "JetBrains Mono", weight = "ExtraBold" },
+	{ family = "ヒラギノ角ゴシック", weight = "Bold" },
+})
 config.font_size = 13
 
 local act = wezterm.action
