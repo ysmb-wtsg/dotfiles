@@ -1,16 +1,4 @@
 {
-  "editor.lineNumbers": "relative",
-  "workbench.editor.enablePreview": false,
-  "files.trimTrailingWhitespace": true,
-  "editor.renderWhitespace": "all",
-  "editor.minimap.enabled": false,
-  "workbench.colorCustomizations": {
-    "statusBar.background": "#005f5f",
-    "statusBar.noFolderBackground": "#005f5f",
-    "statusBar.debuggingBackground": "#005f5f",
-    "statusBar.foreground": "#ffffff",
-    "statusBar.debuggingForeground": "#ffffff"
-  },
   "vim.easymotion": true,
   "vim.replaceWithRegister": true,
   "vim.smartRelativeLine": true,
@@ -23,6 +11,10 @@
   "vim.hlsearch": true,
   "vim.leader": "<space>",
   "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": [";"],
+      "commands": ["workbench.action.showCommands"]
+    },
     {
       "before": ["g", "t"],
       "commands": ["problems.action.openToSide"]
@@ -50,10 +42,6 @@
     {
       "before": ["<C-a>"],
       "after": ["g", "g", "<S-v>", "G"]
-    },
-    {
-      "before": [";"],
-      "after": [":"]
     },
     {
       "before": ["f"],
@@ -93,7 +81,9 @@
     },
     {
       "before": ["j"],
-      "after": ["g", "j"]
+      "commands": [{
+        "command": "accelerated.cursorDown"
+      }]
     },
     {
       "before": ["J"],
@@ -101,7 +91,9 @@
     },
     {
       "before": ["k"],
-      "after": ["g", "k"]
+      "commands": [{
+        "command": "accelerated.cursorUp"
+      }]
     },
     {
       "before": ["K"],
@@ -144,10 +136,6 @@
       "commands": ["actions.find"]
     },
     {
-      "before": ["<leader>", "e"],
-      "commands": ["workbench.action.toggleSidebarVisibility"]
-    },
-    {
       "before": ["<leader>", "s", "v"],
       "commands": ["workbench.action.splitEditor"]
     },
@@ -174,23 +162,15 @@
     },
     {
       "before": ["<leader>", "g"],
-      "commands": ["lazygit.openLazygit"]
+      "commands": ["lazygit-vscode.toggle"]
     },
     {
-      "before": ["<leader>", "f", "f"],
-      "commands": ["workbench.action.quickOpen"]
-    },
-    {
-      "before": ["<leader>", "f", "c"],
-      "commands": ["workbench.action.showCommands"]
+      "before": ["<leader>", "e"],
+      "commands": ["file-browser.open"]
     },
     {
       "before": ["<leader>", "f", "g"],
-      "commands": ["search.action.openNewEditor"]
-    },
-    {
-      "before": ["<leader>", "f", "e"],
-      "commands": ["workbench.view.extensions"]
+      "commands": ["livegrep.search"]
     },
     {
       "before": ["<leader>", "f", "e"],
@@ -201,7 +181,7 @@
       "commands": ["editor.toggleFold"]
     },
     {
-      "before": ["<leader>", "m", "p"],
+      "before": ["<leader>", "p", "m"],
       "commands": ["markdown.showPreviewToSide"]
     },
     {
@@ -237,16 +217,12 @@
       "after": ["g", "r"]
     },
     {
-      "before": ["<Leader>", "l"],
+      "befor": ["L"],
       "after": ["$"]
     },
     {
-      "before": ["<Leader>", "h"],
+      "before": ["H"],
       "after": ["^"]
-    },
-    {
-      "before": ["<Leader>", "m"],
-      "after": ["%"]
     },
     {
       "before": ["<Tab>"],
@@ -261,7 +237,27 @@
       "commands": ["expand_region"]
     }
   ],
+  "editor.lineNumbers": "relative",
+  "workbench.editor.enablePreview": false,
+  "files.trimTrailingWhitespace": true,
+  "editor.renderWhitespace": "all",
+  "editor.minimap.enabled": false,
+  "workbench.colorCustomizations": {
+    "statusBar.background": "#005f5f",
+    "statusBar.noFolderBackground": "#005f5f",
+    "statusBar.debuggingBackground": "#005f5f",
+    "statusBar.foreground": "#ffffff",
+    "statusBar.debuggingForeground": "#ffffff"
+  },
   "workbench.startupEditor": "none",
-  "workbench.colorTheme": "Ayu Dark Bordered"
+  "workbench.colorTheme": "Ayu Dark Bordered",
+  "dev.containers.dockerSocketPath": "~/.config/colima/default/docker.sock",
+  "dev.containers.dockerPath": "/opt/homebrew/bin/docker",
+  "continue.telemetryEnabled": false,
+  "continue.enableTabAutocomplete": true,
+  "yaml.schemas": {
+    "/Users/ikeda-ks/.vscode/extensions/continue.continue-1.0.10-darwin-arm64/config-yaml-schema.json": [
+      ".continue/**/*.yaml"
+    ]
+  },
 }
-

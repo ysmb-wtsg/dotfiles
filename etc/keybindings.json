@@ -1,38 +1,30 @@
 [
   // -----------------------------
+  // for plugins
+  // -----------------------------
+  // File Browser
+  {
+    "key": "ctrl+l",
+    "command": "file-browser.stepIn",
+    "when": "inFileBrowser"
+  },
+  {
+    "key": "ctrl+h",
+    "command": "file-browser.stepOut",
+    "when": "inFileBrowser"
+  },
+  {
+    "key": "ctrl+r",
+    "command": "file-browser.rename",
+    "when": "inFileBrowser"
+  },
+  // -----------------------------
   // toggle
   // -----------------------------
   // toggle taiminal
   {
     "key": "ctrl+/",
     "command": "workbench.action.terminal.toggleTerminal"
-  },
-  // -----------------------------
-  // explorer
-  // -----------------------------
-  // open file
-  {
-    "key": "o",
-    "command": "list.select",
-    "when": "explorerViewletFocus && explorerViewletVisible && listFocus && !inputFocus"
-  },
-  // delete file
-  {
-    "key": "d",
-    "command": "deleteFile",
-    "when": "explorerViewletFocus && listFocus &&explorerViewletVisible && !inputFocus"
-  },
-  // rename file
-  {
-    "key": "r",
-    "command": "renameFile",
-    "when": "explorerViewletFocus && listFocus &&explorerViewletVisible && !inputFocus"
-  },
-  // add file or folder
-  {
-    "key": "a",
-    "command": "explorer.newFile",
-    "when": "explorerViewletFocus && listFocus &&explorerViewletVisible && !inputFocus"
   },
   // -----------------------------
   // open json
@@ -71,7 +63,7 @@
     "when": "treestickyScrollFocused"
   },
   // -----------------------------
-  // rewite arrow
+  // rewite arrow key
   // -----------------------------
   // up
   {
