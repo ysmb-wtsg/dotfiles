@@ -68,6 +68,7 @@ alias yi='yarn install'
 alias ya='yarn add'
 alias yd='yarn dev'
 alias yr='yarn run'
+alias z='zellij'
 
 cdls ()
 {
