@@ -4,6 +4,7 @@ export POETRY_ROOT="$HOME/.local/"
 export LANG="en_us.UTF-8"
 export PATH="/opt/homebrew/bin:$PATH"
 export PATH="$POETRY_ROOT/bin:$PATH"
+export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
 
 DOCKER_SOCKET_PATH="$XDG_CONFIG_HOME/colima/default/docker.sock"
 export DOCKER_HOST="unix://$DOCKER_SOCKET_PATH"
