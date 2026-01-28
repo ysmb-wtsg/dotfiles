@@ -1,0 +1,26 @@
+{
+  "$schema": "https://platform.claude.com/docs/schemas/claude-code/keybindings.json",
+  "bindings": [
+    {
+      "context": "Autocomplete",
+      "bindings": {
+        "ctrl+j": "autocomplete:next",
+        "ctrl+k": "autocomplete:previous"
+      }
+    },
+    {
+      "context": "Confirmation",
+      "bindings": {
+        "ctrl+j": "confirm:next",
+        "ctrl+k": "confirm:previous"
+      }
+    },
+    {
+      "context": "Tabs",
+      "bindings": {
+        "ctrl+j": "tabs:next",
+        "ctrl+k": "tabs:previous"
+      }
+    }
+  ]
+}

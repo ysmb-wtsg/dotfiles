@@ -5,6 +5,7 @@
 !/.brew_formulae
 !/.brew_cask
 !/.config
+!/.claude
 !/.git-completion.bash
 !/.vimrc
 !/.gvimrc
