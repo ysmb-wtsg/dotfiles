@@ -5,7 +5,6 @@ export ANDROID_HOME="/Users/user/Library/Android/sdk"
 export LANG="en_us.UTF-8"
 export PATH="/opt/homebrew/bin:$PATH"
 export PATH="$POETRY_ROOT/bin:$PATH"
-export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
 export PATH="$ANDROID_HOME/bin:$PATH"
 
 DOCKER_SOCKET_PATH="$XDG_CONFIG_HOME/colima/default/docker.sock"
