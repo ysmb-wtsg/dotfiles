@@ -35,6 +35,17 @@
         ]
       }
     ],
+    "Notification": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "osascript -e 'display notification \"確認が必要です\" with title \"Claude Code\"'"
+          }
+        ]
+      }
+    ],
     "Stop": [
       {
         "matcher": "",
@@ -50,7 +61,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "active=$(jq -r '.stop_hook_active'); if [ \"$active\" = 'false' ]; then osascript -e 'display notification \"タスクが完了しました\" with title \"Claude Code\"'; else osascript -e 'display notification \"確認が必要です\" with title \"Claude Code\"'; fi"
+            "command": "jq -r '.stop_hook_active' | grep -q false && osascript -e 'display notification \"タスクが完了しました\" with title \"Claude Code\"'"
           }
         ]
       }
