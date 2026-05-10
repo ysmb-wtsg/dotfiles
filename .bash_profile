@@ -3,5 +3,3 @@ export PATH=$HOME/command:$PATH
 
 test -f ~/.profile && . ~/.profile
 test -f ~/.bashrc && . ~/.bashrc
-
-exec winpty bash
