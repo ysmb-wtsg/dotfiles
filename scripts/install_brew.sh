@@ -1,11 +1,7 @@
 #!/bin/bash -e
 
-echo "brew tap..."
-brew tap sanemat/font
-brew tap homebrew/cask-fonts
-
-DOTFILES_PATH="$HOME/dotfiles"
-FORMULAE_LIST=$DOTFILES_PATH/ect/brew_formulae
+DOTFILES_PATH="${DOTFILES_PATH:-$HOME/dotfiles}"
+FORMULAE_LIST=$DOTFILES_PATH/etc/brew_formulae
 CASK_LIST=$DOTFILES_PATH/etc/brew_cask
 
 if [ ! -f "$FORMULAE_LIST" ]; then
@@ -30,10 +26,6 @@ done <"$CASK_LIST"
 
 brew cleanup
 
-cat <<END
-
-**************************************************
-!!!!!!!!!!!!!!BREW PACKAGES INSTALLED!!!!!!!!!!!!!
-**************************************************
-
-END
+echo ""
+echo " ✅  Brew packages installed"
+echo ""

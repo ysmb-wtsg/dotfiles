@@ -1,4 +1,11 @@
-#!/usr/bash
+#!/bin/bash -e
 
-sh ./scripts/dump_brew.sh.sh
-sh ./scripts/dump_vsc_extensions.sh.sh
+export DOTFILES_PATH="$(cd "$(dirname "$0")" && pwd)"
+
+sh "$DOTFILES_PATH/scripts/dump_brew.sh"
+sh "$DOTFILES_PATH/scripts/dump_vsc_extensions.sh"
+sh "$DOTFILES_PATH/scripts/dump_claude_skills.sh"
+
+echo ""
+echo " ✨  Dotfiles dump complete"
+echo ""

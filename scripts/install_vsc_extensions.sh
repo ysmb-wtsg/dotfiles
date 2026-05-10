@@ -1,6 +1,6 @@
 #!/bin/bash -e
 
-DOTFILES_PATH="$HOME/dotfiles"
+DOTFILES_PATH="${DOTFILES_PATH:-$HOME/dotfiles}"
 EXTENSION_LIST=$DOTFILES_PATH/etc/vsc_extensions
 
 if [ ! -f "$EXTENSION_LIST" ]; then
@@ -12,10 +12,6 @@ while IFS= read -r extension; do
   code --install-extension "$extension" --force
 done <"$EXTENSION_LIST"
 
-cat <<END
-
-**************************************************
-!!!!!!!!!!!!VSC EXTENSIONS INSTALLED!!!!!!!!!!!!!!
-**************************************************
-
-END
+echo ""
+echo " ✅  VSCode extensions installed"
+echo ""
