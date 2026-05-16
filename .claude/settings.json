@@ -1,4 +1,39 @@
 {
+  "permissions": {
+    "allow": [
+      "Bash(cat:*)",
+      "Bash(ls:*)",
+      "Bash(head:*)",
+      "Bash(tail:*)",
+      "Bash(less:*)",
+      "Bash(file:*)",
+      "Bash(wc:*)",
+      "Bash(du:*)",
+      "Bash(df:*)",
+      "Bash(stat:*)",
+      "Bash(find:*)",
+      "Bash(grep:*)",
+      "Bash(rg:*)",
+      "Bash(tree:*)",
+      "Bash(pwd:*)",
+      "Bash(whoami:*)",
+      "Bash(echo:*)",
+      "Bash(printenv:*)",
+      "Bash(env:*)",
+      "Bash(which:*)",
+      "Bash(type:*)",
+      "Bash(readlink:*)",
+      "Bash(realpath:*)",
+      "Bash(jq:*)",
+      "Bash(npm run:*)",
+      "Bash(bun run:*)",
+      "Read",
+      "Glob",
+      "Grep",
+      "mcp__playwright",
+      "WebFetch"
+    ]
+  },
   "statusLine": {
     "type": "command",
     "command": "input=$(cat); model=$(printf '%s' \"$input\" | jq -r '.model.display_name // \"Claude\"' | sed 's/^Claude //'); used=$(printf '%s' \"$input\" | jq -r '.context_window.used_percentage // empty'); dir=$(printf '%s' \"$input\" | jq -r '.workspace.current_dir // empty'); branch=''; [ -n \"$dir\" ] && branch=$(git -C \"$dir\" rev-parse --abbrev-ref HEAD 2>/dev/null); out=\"$model\"; [ -n \"$branch\" ] && out=\"$out | $branch\"; [ -n \"$used\" ] && out=\"$out | ctx: ${used}%\"; printf '%s' \"$out\""
@@ -35,17 +70,6 @@
         ]
       }
     ],
-    "Notification": [
-      {
-        "matcher": "",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "osascript -e 'display notification \"確認が必要です\" with title \"Claude Code\"'"
-          }
-        ]
-      }
-    ],
     "Stop": [
       {
         "matcher": "",
@@ -61,7 +85,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "jq -r '.stop_hook_active' | grep -q false && osascript -e 'display notification \"タスクが完了しました\" with title \"Claude Code\"'"
+            "command": "active=$(jq -r '.stop_hook_active'); if [ \"$active\" = 'false' ]; then osascript -e 'display notification \"タスクが完了しました\" with title \"Claude Code\"'; else osascript -e 'display notification \"確認が必要です\" with title \"Claude Code\"'; fi"
           }
         ]
       }
