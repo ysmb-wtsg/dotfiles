@@ -53,6 +53,15 @@
             "command": "serena-hooks auto-approve --client=claude-code"
           }
         ]
+      },
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/Users/user/.claude/hooks/rtk-rewrite.sh"
+          }
+        ]
       }
     ],
     "SessionStart": [
@@ -62,6 +71,26 @@
           {
             "type": "command",
             "command": "serena-hooks activate --client=claude-code"
+          }
+        ]
+      }
+    ],
+    "Notification": [
+      {
+        "matcher": "permission_prompt",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "osascript -e 'display notification \"確認が必要です\" with title \"Claude Code\" sound name \"Funk\"'"
+          }
+        ]
+      },
+      {
+        "matcher": "idle_prompt",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "osascript -e 'display notification \"入力待ちです\" with title \"Claude Code\" sound name \"Glass\"'"
           }
         ]
       }
@@ -81,7 +110,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "active=$(jq -r '.stop_hook_active'); if [ \"$active\" = 'true' ]; then osascript -e 'display notification \"確認が必要です\" with title \"Claude Code\"'; else osascript -e 'display notification \"タスクが完了しました\" with title \"Claude Code\"'; fi"
+            "command": "osascript -e 'display notification \"タスクが完了しました\" with title \"Claude Code\" sound name \"Ping\"'"
           }
         ]
       }
@@ -91,5 +120,6 @@
     "type": "command",
     "command": "input=$(cat); model=$(printf '%s' \"$input\" | jq -r '.model.display_name // \"Claude\"' | sed 's/^Claude //'); used=$(printf '%s' \"$input\" | jq -r '.context_window.used_percentage // empty'); dir=$(printf '%s' \"$input\" | jq -r '.workspace.current_dir // empty'); branch=''; [ -n \"$dir\" ] && branch=$(git -C \"$dir\" rev-parse --abbrev-ref HEAD 2>/dev/null); out=\"$model\"; [ -n \"$branch\" ] && out=\"$out | $branch\"; [ -n \"$used\" ] && out=\"$out | ctx: ${used}%\"; printf '%s' \"$out\""
   },
-  "effortLevel": "high"
+  "effortLevel": "high",
+  "model": "claude-fable-5[1m]"
 }
