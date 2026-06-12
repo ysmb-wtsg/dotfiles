@@ -6,6 +6,11 @@ if wezterm.config_builder then
   config = wezterm.config_builder()
 end
 
+wezterm.on('format-tab-title', function(tab)
+  local title = tab.active_pane.title
+  return { { Text = ' ' .. title .. ' ' } }
+end)
+
 config.initial_cols = 120
 config.initial_rows = 32
 
